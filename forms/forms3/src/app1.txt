@@ -1,0 +1,72 @@
+//with two input fields
+
+import { useState } from "react";
+
+const App = () =>{
+  //passing object
+  const [Fullname,setFullName] = useState({
+    fname:"fname",
+    lname:"lname",
+  });
+  
+  const inputEvent = (event) =>{
+    setName(event.target.value);
+    console.log(event.target.name);
+    console.log(event.target.value);
+
+    const value = event.target.value;
+    const name = event.target.name;
+
+    setFullName((preValue)=>{
+      //console.log(preValue);
+      if(name === "fname"){ 
+        return{
+          fname: value,
+          lname: preValue.lname,
+        };
+      }
+      else if (name === "lname"){
+        return{
+          fname: preValue.fname,
+          lname: value,
+        };
+      }
+    })
+  };
+
+  const onSubmit =(event)=>{
+    event.preventDefault(); //to prevent html form tag default behaviour
+    alert("form summited");
+  };
+
+  return (
+    <>
+      <div className="main_div">
+      <form onSubmit={onSubmit}>
+        <div>
+            <h1>Hello {Fullname.fname} {Fullname.lname}</h1>
+            <input
+              type="text"
+              placeholder="Enter Your Name"
+              name="fname"
+              onChange={inputEvent}
+              value={Fullname.fname}
+            />
+            <br/>
+            <input
+              type="text"
+              placeholder="Enter Your Last Name"
+              name="lname"
+              onChange={inputEvent}
+              value={Fullname.lname}
+            />
+            <button type="submit" >Click Me</button>
+          </div>
+        </form>
+      </div>
+    </>
+  );
+}
+
+
+export default App;

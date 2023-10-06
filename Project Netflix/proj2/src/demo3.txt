@@ -1,0 +1,143 @@
+Arraymap function In React js
+
+/*
+//index.js page
+
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css"
+import Card from "./Card"
+import Sdata from "./Sdata";
+
+const favSeries="netflix";
+//using if else condition
+
+const Fav = ( ) = >{
+   if (favSeries === "netflix")
+   {
+    return(
+       <Card
+         key={Sdata[1].id}
+         imgsrc={Sdata[1].imgscr}
+         title={Sdata[1].title}
+         sname={Sdata[1].sname}
+         link={Sdata[1].link}
+       />
+      );
+   } else
+   {
+        return(
+       <Card
+         key={Sdata[0].id}
+         imgsrc={Sdata[0].imgscr}
+         title={Sdata[0].title}
+         sname={Sdata[0].sname}
+         link={Sdata[0].link}
+       />
+      );
+   }
+}
+
+ReactDOM.render(
+  <>
+  <h2 className="heading_style">LIST OF NETFLIX SERIES</h2>
+    {//tarnarry operator}
+    {(favSeries === "netflix")? <Netflix/> : <Amazon/>}
+    {//first you must have to create component of netflix and amazon}
+   </>
+   ,document.getElementById("root"));
+
+*/
+
+/*
+//card.js page
+
+function Card(props){
+    console.log(props);
+    return (
+    <>
+    <div className="cards">
+        <div className="card">
+          <img src={props.imgsrc} 
+          alt="myPic" 
+          className="card_img" />
+          <div className="card_info">
+            <span className="card_category">{props.title}</span>
+            <h3 className="card_title"> {props.sname} </h3>
+             <a href={props.link} 
+             target="_blank">
+               <button> Watch Now </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      </>
+      );
+  }
+  
+  
+export default Card;  
+*/
+
+/*
+//sdata.jsx page
+const Sdata=[
+    {
+            id:1;
+
+            sname: "DARK",
+            
+            imgscr: "https://wallpapercave.com/wp/wp4056410.jpg",
+            
+            title: "Netflix Original Series",
+            
+            links: "https://www.netflix.com/in/title/80990668?source=35",
+    },                
+    {   
+            id:2;    
+
+            sname: "extra curricular ",
+            
+            imgscr:"https://resizing.flixster.com/xuVpm0Fy4aul1tzPlhVyorexEmk=/206x305/v2/https://resizing.flixster.com/9_UFhNH0nIQR71Jn-w94AJZbDFI=/ems.cHJkLWVtcy1hc3NldHMvdHZzZWFzb24vUlRUVjcwMjA0Ny53ZWJw",
+            
+            title: "Netflix Original Series",
+            
+            links: "https://www.netflix.com/in/title/80990668?source=35",
+    },        
+    {        
+            id:3;
+
+            sname: "Stranger Things ",
+            
+            imgscr: "https://wallpapercave.com/wp/wp1917154.jpg",
+            
+            title: "Netflix Original Series",
+            
+            links: "https://www.netflix.com/in/title/80990668?source=35",       
+    },        
+    {        
+            id:4;
+
+            sname: "the Vampire Diaries",
+            
+            imgscr: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTY25rJZiXv9YNl-BkbfXOVYEbaSKq6Jrb4h6sJKfDEqgTM4k9m",
+            
+            title: "amazon original Series",
+            
+            links: "https://www.netflix.com/in/title/809906687source-35",
+    },
+    {        
+            id:5;
+
+            sname: "My First-2 Love",
+            
+            imgscr: "https://i.pinimg.com/474x/7b/19/58/7b19584ec5ffba063a121508e78fe7a4.jpg",
+            
+            title: "Netflix Original Series",
+            
+            links: "https://www.netflix.com/in/title/81026700?source=35",
+      }
+];      
+            
+            export default Sdata;
+            */

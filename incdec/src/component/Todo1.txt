@@ -1,0 +1,37 @@
+import React, { useState } from "react";
+import "./Todo.css";
+
+const Todo = () =>{
+    const [num,setNum] =useState(0);
+
+    const Inc = () =>{
+        
+        setNum(num+1);
+    }
+
+    const Dec = () =>{
+        if(num>0){
+        setNum(num-1);
+        }
+        else{
+            setNum(0);
+            alert("No Limit Exists");
+        }
+    }
+
+    return (
+        <>
+            <div className="main_div">
+                <div className="center_div">
+                    <h1>{num}</h1>
+                    <div className="btn_div">
+                        <button onClick={Inc}>Increment</button>
+                        <button onClick={Dec}>Decrement</button>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
+
+export default Todo;

@@ -1,0 +1,20 @@
+//event in react
+
+eg:-
+import React from "react";
+//work as event funtion
+const IncNum = ()=>{
+  console.log("click");
+}
+
+const App = () =>{
+  return (
+    <>
+      <h1> 0 </h1>
+        {/*here onClick is an event written in camel caseconvenstion other is mouseHover etc*/}
+      <button onClick={IncNum}>Click me</button>
+    </>
+  )
+}
+
+export default App; 

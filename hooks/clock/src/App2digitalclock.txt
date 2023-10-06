@@ -1,0 +1,22 @@
+import React,{useState} from "react";
+
+const App = ()=>{
+
+    let Time=new Date().toLocaleTimeString();
+
+    const [ctime,setCtime]=useState(newTime);
+    
+    const updatTime = () =>{
+        let newCTime=new Date().toLocaleTimeString();
+        setCtime(newCTime);
+    }
+
+    setInterval(updatTime,1000);
+    
+    return(
+        <>
+            <h1>{ctime}</h1>   
+        </>
+    )
+}
+export default App;

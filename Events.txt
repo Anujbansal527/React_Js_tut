@@ -1,0 +1,25 @@
+import React from "react";
+
+const App = () =>{
+    const purple = "#8e44ad";
+    const [bg,setbg]=useState(purple);
+    const [name,setName]=useState("Click me");
+
+    
+    const bgChange = ()=>{
+        //console.log("Clicked");
+    
+        let newBg="#34495e";
+        setBg(newBg);
+        setName("You Clicked");
+    };
+
+    return(
+        <>
+            <div style={{backgroundColor : "red" }}> 
+            <buttin onClick={bgChange}>Click Me </button>
+            </div>  
+        </>
+    )
+}
+export default App;
